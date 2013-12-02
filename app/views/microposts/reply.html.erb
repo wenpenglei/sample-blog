@@ -1,0 +1,11 @@
+<div class="micropost">
+  <div class="created_at"><%= micropost.created_at.strftime("%B %d, %Y") %></div>
+  <div class="content">
+    <%= micropost.content %>
+  </div>
+  <div class="actions">
+    <%= link_to "Reply", new_micropost_path(:parent_id => micropost) %> |
+    <%= link_to "Destroy", micropost, :confirm => "Are you sure?", :method => :delete %>
+  </div>
+</div>
+

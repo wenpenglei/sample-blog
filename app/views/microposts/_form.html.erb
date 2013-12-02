@@ -1,0 +1,10 @@
+<%= form_for @microposts do |f| %>
+  <%= f.error_microposts %>
+   <%= f.error_microposts %>
+  <%= f.hidden_field :parent_id %>
+  <p>
+  <%= f.label :content, "New microposts" %><br />
+  <%= f.text_area :content, :rows => 8 %>
+  </p>
+  <p><%= f.submit "Post microposts" %></p>
+<% end %>
