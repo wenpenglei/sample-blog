@@ -4,6 +4,13 @@
   <%= link_to feed_item.user.name, feed_item.user %>
 </span>
 <span class="content"><%= feed_item.content %></span>
+<span class="content"><%= feed_item.id %></span>
+
+<%= image_tag feed_item.avatar.url if feed_item.avatar.present? %> <br />
+<%#<%= image_tag @micropost.avatar.url(:medium) %>%>
+<%#<%= image_tag @micropost.avatar.url(:thumb) %>%>
+
+
 <span class="timestamp">
   Posted <%= time_ago_in_words(feed_item.created_at) %> ago.
 </span>

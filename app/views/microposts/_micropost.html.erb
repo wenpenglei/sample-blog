@@ -4,6 +4,8 @@
   Posted <%= time_ago_in_words(micropost.created_at) %> ago.
 </span>
 
+    <%= micropost.created_at %>
+
 <% if current_user?(micropost.user) %>
   <%= link_to "delete", micropost, method: :delete,
     data: { confirm: "You sure?" },
@@ -11,8 +13,3 @@
 <% end %>
 </li>
 
-<%#<%=   link_to "Reply", new_micropost_path(:parent_id => micropost) %>  %>
-<%#<%= if  link_to "Reply", new_micropost_path(:parent_id => micropost)  %>%>
-  <%#<%= render @microposts %>%>
-<%#<%= render "form" %>%>
-<%#<% end %>%>
